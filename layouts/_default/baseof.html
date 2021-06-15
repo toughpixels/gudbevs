@@ -6,7 +6,7 @@
         <dl>
         <dt>Quality</dt>
         <dl>{{ .Params.category }}</dl>
-        {{ with .Params.tags }}
+        {{ if .Params.tags }}
         <dt>Tags</dt>
         <dl>{{ delimit .Params.tags ", " }}</dl>
         {{ end }}
