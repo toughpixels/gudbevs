@@ -6,11 +6,13 @@
         <dl>
         <dt>Quality</dt>
         <dl>{{ .Params.category }}</dl>
+        {{ with .Params.tags }}
         <dt>Tags</dt>
         <dl>{{ delimit .Params.tags ", " }}</dl>
+        {{ end }}
+        <dt>Color Theme</dt>
+        <dl>{{ .Params.theme }}</dl>
         </dl>
-        {{ .Params.category }}
-        {{ .Params.tags }}
         {{ .TableOfContents }}
         Word count: {{ .WordCount }}
         <div id="content">
