@@ -1,6 +1,6 @@
 ---
-title: Emily S
+title: Gudrun's Seltzer Reviews
 weight: 0
-description: hello!
+description: A seltzer guide
 ---
 

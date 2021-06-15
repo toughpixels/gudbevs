@@ -5,6 +5,19 @@ backend:
 media_folder: assets/img
 public_folder: /img
 collections:
+  - name: 'reviews'
+    label: 'Reviews'
+    folder: 'content/reviews'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Quality", name: "category", widget: "select", required: true, hint: "", default: 'bad', options: ['bad', 'okay', 'good'], multiple: false }
+      - {label: "Tags", name: "tags", widget: "select", required: true, hint: "", default: '', options: ['good at room temp', 'another tag', 'another tag 2'], multiple: true }
+      - {label: "Color Scheme", name: "theme", widget: "select", required: true, hint: "", default: 'theme1', options: ['theme1', 'theme2', 'theme3'], multiple: false }
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
     folder: "content"
@@ -43,89 +56,6 @@ collections:
   - name: "unique"
     label: "Unique Pages"
     files:
-      - file: "content/allfields.md"
-        label: "All Fields"
-        name: "allfields"
-        fields:
-          - {
-              label: "Text Field",
-              name: "TextField",
-              widget: "string",
-              required: false,
-              hint: "",
-            }
-          - {
-              label: "Is Cool",
-              name: "IsCool",
-              widget: "boolean",
-              default: true,
-              hint: "",
-            }
-          - {
-              label: "Color",
-              name: "Color",
-              widget: "color",
-              required: true,
-              hint: "",
-              default: "#fff",
-              allowInput: false,
-              enableAlpha: false,
-            }
-          - {
-              label: "The Date",
-              name: "TheDate",
-              widget: "datetime",
-              required: true,
-              hint: "",
-              date_format: true,
-              time_format: true,
-              picker_utc: false,
-            }
-          - {
-              label: "My File",
-              name: "MyFile",
-              widget: "file",
-              required: true,
-              hint: "",
-              default: false,
-              media_library: { media_folder: "/static/files" },
-            }
-          - {
-              label: "My Image",
-              name: "MyImage",
-              widget: "image",
-              required: true,
-              hint: "",
-              default: false,
-              media_library:
-                {
-                  allow_multiple: false,
-                  config: false,
-                  media_folder: "/assets/img",
-                },
-            }
-
-      - file: "content/testimonials.md"
-        label: "Testimonials"
-        name: "testimonials"
-        fields:
-          - {
-              label: "Testimonials",
-              name: "Testimonials",
-              widget: "list",
-              required: true,
-              hint: "",
-              allow_add: true,
-              collapsed: true,
-              minimize_collapsed: false,
-              add_to_top: false,
-              label_singular: "Add Testimonial",
-              summary: "{{fields.Title}}",
-              fields: [
-                  {label: "Title", name: "Title", widget: "string", required: true, hint: "" },
-                  {label: "Body", name: "Body", widget: "string", required: true, hint: "" }
-                ]
-            }
       - file: "content/_index.md"
         label: "Home"
         name: "home"

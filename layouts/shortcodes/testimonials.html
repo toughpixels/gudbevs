@@ -1,9 +1,0 @@
-{{ $orderPage := $.Site.GetPage "/order"  }}
-{{ range $index, $slug := $orderPage.Params.testimonials }}
-
-{{ $path :=  $slug | printf "%s/%s" "/testimonials" | printf "%s" }}
-{{ with $.Site.GetPage $path}}
-{{ .Title }}
-{{ .Content }}
-{{ end }}
-{{ end }}

@@ -3,6 +3,14 @@
     {{- partial "head.html" . -}}
     <body class="{{ .Kind }} {{ .Layout }} bg-dark">
         {{- partial "header.html" . -}}
+        <dl>
+        <dt>Quality</dt>
+        <dl>{{ .Params.category }}</dl>
+        <dt>Tags</dt>
+        <dl>{{ delimit .Params.tags ", " }}</dl>
+        </dl>
+        {{ .Params.category }}
+        {{ .Params.tags }}
         {{ .TableOfContents }}
         Word count: {{ .WordCount }}
         <div id="content">
