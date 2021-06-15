@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{- partial "head.html" . -}}
+    <body class="{{ .Kind }} {{ .Layout }} bg-dark">
+        {{- partial "header.html" . -}}
+        {{ .TableOfContents }}
+        Word count: {{ .WordCount }}
+        <div id="content">
+        {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "footer.html" . -}}
+        {{- partial "netlify-identity.html" . -}}
+    </body>
+</html>

@@ -1,0 +1,152 @@
+backend:
+  name: git-gateway
+  branch: main
+  local_backend: true
+media_folder: assets/img
+public_folder: /img
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "content"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          hint: "",
+          required: true,
+        }
+      - {
+          label: "Weight",
+          name: "weight",
+          widget: "number",
+          hint: "Posts with lower numbers will appear before those with higher numbers.",
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          hint: "A short description of what the page is about",
+          required: true,
+        }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          hint: "For an aside, copy/paste this: {{< aside >}}✨{{< /aside >}} and replace the stars with text",
+        }
+
+  - name: "unique"
+    label: "Unique Pages"
+    files:
+      - file: "content/allfields.md"
+        label: "All Fields"
+        name: "allfields"
+        fields:
+          - {
+              label: "Text Field",
+              name: "TextField",
+              widget: "string",
+              required: false,
+              hint: "",
+            }
+          - {
+              label: "Is Cool",
+              name: "IsCool",
+              widget: "boolean",
+              default: true,
+              hint: "",
+            }
+          - {
+              label: "Color",
+              name: "Color",
+              widget: "color",
+              required: true,
+              hint: "",
+              default: "#fff",
+              allowInput: false,
+              enableAlpha: false,
+            }
+          - {
+              label: "The Date",
+              name: "TheDate",
+              widget: "datetime",
+              required: true,
+              hint: "",
+              date_format: true,
+              time_format: true,
+              picker_utc: false,
+            }
+          - {
+              label: "My File",
+              name: "MyFile",
+              widget: "file",
+              required: true,
+              hint: "",
+              default: false,
+              media_library: { media_folder: "/static/files" },
+            }
+          - {
+              label: "My Image",
+              name: "MyImage",
+              widget: "image",
+              required: true,
+              hint: "",
+              default: false,
+              media_library:
+                {
+                  allow_multiple: false,
+                  config: false,
+                  media_folder: "/assets/img",
+                },
+            }
+
+      - file: "content/testimonials.md"
+        label: "Testimonials"
+        name: "testimonials"
+        fields:
+          - {
+              label: "Testimonials",
+              name: "Testimonials",
+              widget: "list",
+              required: true,
+              hint: "",
+              allow_add: true,
+              collapsed: true,
+              minimize_collapsed: false,
+              add_to_top: false,
+              label_singular: "Add Testimonial",
+              summary: "{{fields.Title}}",
+              fields: [
+                  {label: "Title", name: "Title", widget: "string", required: true, hint: "" },
+                  {label: "Body", name: "Body", widget: "string", required: true, hint: "" }
+                ]
+            }
+      - file: "content/_index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {
+              label: "Title",
+              name: "title",
+              widget: "string",
+              hint: "",
+              required: true,
+            }
+          - {
+              label: "Description",
+              name: "description",
+              widget: "text",
+              hint: "A short description of what the page is about",
+              required: true,
+            }
+          - {
+              label: "Body",
+              name: "body",
+              widget: "markdown",
+              hint: "For an aside, copy/paste this: {{< aside >}}✨{{< /aside >}} and replace the stars with text",
+            }

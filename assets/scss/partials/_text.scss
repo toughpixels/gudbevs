@@ -1,0 +1,51 @@
+body {
+    line-height: 1.5;
+}
+h1 {
+    font-size: 4rem;
+}
+h2, .size-h2 {
+    font-size: 2.5rem;
+    @include respond(sm) {
+        font-size: 3rem;
+    }
+}
+h3, .size-h3 {
+    font-size: 2rem
+}
+h4, .size-h4 {
+    font-size: 1.5rem;
+}
+.size-h2, .size-h3, .size-h4 {
+    > * {
+        font-size: 1rem;
+    }
+}
+
+.text-lead {
+    font-size: 1.3rem;
+}
+.mw-prose {
+    max-width: 85ch;
+}
+.prose {
+    > * {
+        margin-top: 1.5em;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    > ul, > ol {
+        margin-left: 2rem;
+        > li + li {
+            margin-top: 1em;
+        }
+    }
+    > ul {
+        list-style-type: disc;
+    }
+    > ol {
+        list-style-type: decimal;
+    }
+}
+
