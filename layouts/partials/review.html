@@ -1,18 +1,4 @@
-{{ .Params.TextField }}<br />
-{{ if .Params.IsCool }}
-cool!
-{{ else }}
-not cool!
-{{ end }}
-<br />
-{{ .Params.Color }}
+<div class="block color block-border">
+    {{ partial "beverage.html" . }}
+</div>
 
-{{ .Params.TheDate }}
-
-{{ .Params.MyFile }}
-
-{{ .Params.MyImage }}
-
-{{ .Params.Testimonials }}
-{{ .Params.Title }}
-{{ .Params.Body }}

@@ -1,3 +1,7 @@
+body {
+    background-color: antiquewhite;
+}
+
 .flex {
     display: flex;
 }
@@ -6,7 +10,19 @@
     display: grid;
 }
 
+.block {
+    height: 90vh;
+}
 
+.color {
+    background-color: aliceblue;
+}
 
+.block-border {
+    border-top: 1px solid orange;
+    border-bottom: 1px solid red;
+}
 
-
+.top-border {
+    border-bottom: 1px solid black;
+}
