@@ -1,11 +1,7 @@
 {{ define "main" }}
-    <div class="flex flex-center logo">
-        <h1>TOdo hidden h1 title  {{ .Title }}</h1>
-        {{ partial "logo/logo.html" . }}
-    </div>
-        {{ partial "wiggle.html" . }}
+    {{ partial "logo.html" . }}
     {{ partial "navigation.html" . }}
-    {{ partial "wiggle.html" . }}
+    {{ partial "preview.html" . }}
     {{ range first 5 (where .Site.Pages "Section" "reviews").ByDate }}
         {{ partial "review.html" . }}
         {{ partial "wiggle.html" . }}
