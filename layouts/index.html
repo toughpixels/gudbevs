@@ -5,5 +5,6 @@
     </div>
     {{ range first 5 (where .Site.Pages "Section" "reviews").ByDate }}
         {{ partial "review.html" . }}
+        {{ partial "wiggle.html" . }}
     {{ end }}
 {{ end }}
