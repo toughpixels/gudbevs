@@ -1,8 +1,12 @@
 {{ define "main" }}
-    <div class="welcome top-border">
-        <h1>{{ .Title }}</h1>
-        <div>{{.Description}}</div>
+    <div class="tc">
+        <div class="flex flex-center logo">
+            {{ partial "logo/logo.html" . }}
+        </div>
+        {{ partial "wiggle.html" . }}
     </div>
+    {{ partial "navigation.html" . }}
+    {{ partial "wiggle.html" . }}
     {{ range first 5 (where .Site.Pages "Section" "reviews").ByDate }}
         {{ partial "review.html" . }}
         {{ partial "wiggle.html" . }}

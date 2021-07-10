@@ -1,0 +1,6 @@
+<div class="grid c3">
+    <h2 class="g-row">Navigation</h2>
+    {{ range (where .Site.Pages "Section" "reviews").ByDate }}
+        <div>preview image</div>
+    {{ end }}
+</div>
