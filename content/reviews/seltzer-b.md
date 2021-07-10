@@ -1,6 +1,6 @@
 ---
 title: seltzer B
-category: good
+categories: good
 tags:
   - another tag
   - another tag 2

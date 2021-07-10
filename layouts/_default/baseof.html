@@ -3,6 +3,8 @@
     {{- partial "head.html" . -}}
     <body class="{{ .Kind }} {{ .Layout }} bg-dark">
         {{- partial "header.html" . -}}
+        {{- partial "navdump.html" . -}}
+        {{ .TableOfContents }}
         <dl>
         <dt>Quality</dt>
         <dl>{{ .Params.category }}</dl>
@@ -13,7 +15,7 @@
         <dt>Color Theme</dt>
         <dl>{{ .Params.theme }}</dl>
         </dl>
-        {{ .TableOfContents }}
+        
         Word count: {{ .WordCount }}
         <div id="content">
         {{- block "main" . }}{{- end }}

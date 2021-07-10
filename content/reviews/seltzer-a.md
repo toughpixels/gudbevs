@@ -1,6 +1,6 @@
 ---
 title: Seltzer A
-category: bad
+categories: bad
 tags:
   - good at room temp
 theme: theme1

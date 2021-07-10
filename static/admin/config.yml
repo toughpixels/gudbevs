@@ -14,7 +14,7 @@ collections:
       preview: false
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Quality", name: "category", widget: "select", required: true, hint: "", default: 'bad', options: ['bad', 'okay', 'good'], multiple: false }
+      - {label: "Quality", name: "categories", widget: "select", required: true, hint: "", default: 'bad', options: ['bad', 'okay', 'good'], multiple: false }
       - {label: "Tags", name: "tags", widget: "select", required: true, hint: "", default: '', options: ['good at room temp', 'another tag', 'another tag 2'], multiple: true }
       - {label: "Color Scheme", name: "theme", widget: "select", required: true, hint: "", default: 'theme1', options: ['theme1', 'theme2', 'theme3'], multiple: false }
       - {label: "Body", name: "body", widget: "markdown"}
