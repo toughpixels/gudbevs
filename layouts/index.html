@@ -1,14 +1,14 @@
 {{ define "main" }}
-    <div class="tc">
-        <div class="flex flex-center logo">
-            {{ partial "logo/logo.html" . }}
-        </div>
-        {{ partial "wiggle.html" . }}
+    <div class="flex flex-center logo">
+        <h1>TOdo hidden h1 title  {{ .Title }}</h1>
+        {{ partial "logo/logo.html" . }}
     </div>
+        {{ partial "wiggle.html" . }}
     {{ partial "navigation.html" . }}
     {{ partial "wiggle.html" . }}
     {{ range first 5 (where .Site.Pages "Section" "reviews").ByDate }}
         {{ partial "review.html" . }}
         {{ partial "wiggle.html" . }}
     {{ end }}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 {{ end }}

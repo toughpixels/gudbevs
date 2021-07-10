@@ -7,76 +7,16 @@ public_folder: /img
 collections:
   - name: 'reviews'
     label: 'Reviews'
-    folder: 'content/reviews'
+    folder: 'content/reviews/{{year}}_{{month}}_{{day}}_{{title}}/'
     create: true
-    slug: '{{slug}}'
+    slug: 'index.html'
+    media_folder: ''
     editor:
       preview: false
     fields:
-      - {label: "Title", name: "title", widget: "string"}
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - {label: "Quality", name: "category", widget: "select", required: true, hint: "", default: 'bad', options: ['bad', 'okay', 'good'], multiple: false }
       - {label: "Tags", name: "tags", widget: "select", required: true, hint: "", default: '', options: ['good at room temp', 'another tag', 'another tag 2'], multiple: true }
       - {label: "Color Scheme", name: "theme", widget: "select", required: true, hint: "", default: 'theme1', options: ['theme1', 'theme2', 'theme3'], multiple: false }
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "pages"
-    label: "Pages"
-    folder: "content"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - {
-          label: "Title",
-          name: "title",
-          widget: "string",
-          hint: "",
-          required: true,
-        }
-      - {
-          label: "Weight",
-          name: "weight",
-          widget: "number",
-          hint: "Posts with lower numbers will appear before those with higher numbers.",
-        }
-      - {
-          label: "Description",
-          name: "description",
-          widget: "text",
-          hint: "A short description of what the page is about",
-          required: true,
-        }
-      - {
-          label: "Body",
-          name: "body",
-          widget: "markdown",
-          hint: "For an aside, copy/paste this: {{< aside >}}✨{{< /aside >}} and replace the stars with text",
-        }
-
-  - name: "unique"
-    label: "Unique Pages"
-    files:
-      - file: "content/_index.md"
-        label: "Home"
-        name: "home"
-        fields:
-          - {
-              label: "Title",
-              name: "title",
-              widget: "string",
-              hint: "",
-              required: true,
-            }
-          - {
-              label: "Description",
-              name: "description",
-              widget: "text",
-              hint: "A short description of what the page is about",
-              required: true,
-            }
-          - {
-              label: "Body",
-              name: "body",
-              widget: "markdown",
-              hint: "For an aside, copy/paste this: {{< aside >}}✨{{< /aside >}} and replace the stars with text",
-            }
