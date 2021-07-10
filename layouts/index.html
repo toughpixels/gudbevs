@@ -2,9 +2,5 @@
     {{ partial "logo.html" . }}
     {{ partial "navigation.html" . }}
     {{ partial "preview.html" . }}
-    {{ range first 5 (where .Site.Pages "Section" "reviews").ByDate }}
-        {{ partial "review.html" . }}
-        {{ partial "wiggle.html" . }}
-    {{ end }}
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 {{ end }}
