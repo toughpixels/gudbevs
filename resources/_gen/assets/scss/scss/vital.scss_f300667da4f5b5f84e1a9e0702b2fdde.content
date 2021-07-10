@@ -1,11 +1,15 @@
-body {
-  background-color: antiquewhite; }
-
 .flex {
   display: flex; }
 
+.flex-center {
+  justify-content: center;
+  align-items: center; }
+
 .grid {
   display: grid; }
+
+body {
+  background-color: antiquewhite; }
 
 .block {
   height: 90vh; }

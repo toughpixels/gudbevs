@@ -1,13 +1,7 @@
+@import "partials/display";
+
 body {
     background-color: antiquewhite;
-}
-
-.flex {
-    display: flex;
-}
-
-.grid {
-    display: grid;
 }
 
 .block {
@@ -26,5 +20,3 @@ body {
 .top-border {
     border-bottom: 1px solid black;
 }
-
-.
