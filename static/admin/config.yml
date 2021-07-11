@@ -7,18 +7,19 @@ public_folder: /img
 collections:
   - name: 'reviews'
     label: 'Reviews'
-    folder: 'content/reviews/{{year}}_{{month}}_{{day}}_{{brand}}_{{title}}/'
+    folder: "content/reviews/{{year}}_{{month}}_{{day}}_{{brand}}_{{title}}/"
     create: true
-    slug: 'index.html'
+    slug: 'index.md'
     media_folder: ''
+    public_folder: ''
     editor:
       preview: false
     fields:
-      - { label: 'Brand', name: 'brand', widget: 'string' }
+      - { label: 'Brand', name: 'brand', iwidget: 'string' }
       - { label: 'Flavors', name: 'flavors', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Rating', name: 'rating', widget: 'number', min: 0, max: 10, step: 0.1 }
-      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Image', name: 'image', widget: 'image', choose_url: false }
       - { label: "Your Review:", name: "body", widget: "markdown" }
       - { label: 'The Good', name: 'goods', widget: 'string', required: false }
       - { label: 'The Medium', name: 'mediums', widget: 'string', required: false }
