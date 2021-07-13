@@ -1,5 +1,4 @@
 ---
 title: Reviews
-weight: 0
-description: Your effervescant guide to the chilled wide world of sparkling beverages.
+description: We review every spearking beverage we find, unless it's on the ground. That's disgusting.
 ---

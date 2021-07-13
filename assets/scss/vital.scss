@@ -1,4 +1,5 @@
 @import "partials/display";
+@import "partials/text";
 
 body {
     background-color: antiquewhite;
@@ -19,4 +20,8 @@ body {
 
 .top-border {
     border-bottom: 1px solid black;
+}
+
+.logo svg {
+    width: 70vw;
 }

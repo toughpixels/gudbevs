@@ -1,7 +1,17 @@
-baseURL = "http://example.org/"
+baseURL = "https://stupefied-kare-38904c.netlify.app/"
 languageCode = "en-us"
 title = "Gudbev's Sparkling Reviews"
 theme = "base"
+
+[taxonomies]
+  tag="tags"
+  category="categories"
+  brand="brands"
+  flavor="flavors"
+  award="awards"
+  neutral="neutrals"
+  warning="warnings"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
