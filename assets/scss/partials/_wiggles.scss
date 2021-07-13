@@ -1,25 +1,33 @@
+#content > *:nth-child(even) .wiggle path {
+    animation-direction: reverse;
+}
+
 .wiggle {
-    --wiggle-height: 10vw;
-    --wiggle-width: 80vw;
-    --wiggle: path("M 0 10 c 2.04914649302637 0 1.9508535069736301 -4 4 -4 s 1.9508535069736301 4 4 4 s 1.9508535069736301 -4 4 -4 s 1.9508535069736301 4 4 4 s 1.9508535069736301 -4 4 -4 s 1.9508535069736301 4 4 4 s 1.9508535069736301 -4 4 -4");
-    --wiggle-color: green;
+    --wiggle: path("m 0,0 c 6,0 11,2 17,4 5,3 11,7 17,11 5,3 11,7 17,11 5,3 11,5 16,5 6,1 12,0 17,-2 6,-2 12,-6 17,-9 6,-4 11,-8 17,-12 6,-3 11,-6 17,-7 6,-1 11,-1 17,0 5,2 11,5 17,9 5,3 11,7 17,11 5,4 11,7 16,9 6,2 12,2 17,1 6,-1 11,-4 17,-7 6,-3 11,-7 17,-11 6,-4 11,-8 17,-10 5,-2 11,-3 17,-3 5,1 11,2 17,5 5,3 11,7 16,11 6,4 12,8 17,11 6,3 12,4 17,5 6,0 11,-2 17,-4 6,-3 11,-6 17,-10 6,-4 11,-8 17,-11 5,-3 11,-6 17,-7 5,0 11,0 16,2 6,2 12,5 17,9 6,4 12,8 17,12 6,3 11,6 17,7 6,2 11.3,2 16.9,0 5.7,-1 11.3,-4 16.9,-7 5.6,-4 11.2,-8 16.9,-12 5.6,-4 11.2,-7 16.8,-9 5.6,-2 11.3,-2 16.9,-2 5.6,1 11.2,4 16.85,7 5.626,3 11.25,7 16.85,11 5.6,4 11.3,7 16.9,10 5.6,2 11.2,4 16.8,4 5.7,-1 11.3,-2 16.9,-5 5.6,-3 11.3,-7 16.9,-11 5.6,-4 11.2,-8 16.8,-11 5.6,-3 11.6,-4 16.6,-5 6,0 12,1 17,3 6,2 11,6 17,10 6,4 11,8 17,11 6,3 11,6 17,7 5,1 11,1 17,-1 5,-2 11,-5 16,-9 6,-4 12,-8 17,-11 6,-4 12,-7 17,-9 6,-1 11,-1 17,0 6,1 11,4 17,7 6,4 11,8 17,12 5,3 11,7 17,9 5,2 11,3 17,2 5,0 11,-2 16,-5 6,-4 12,-8 17,-11 6,-4 12,-8 17,-11 6,-2 11,-4 17,-4");
+    --wiggle-color: darkblue;
     --wiggle-size: .1rem;
-    --wiggle-speed: 8s;
+    --wiggle-speed: 4s;
 }
 
 .wiggle svg {
-    height: var(--wiggle-height);
-    width: var(--wiggle-width);
-    margin: auto;
+    overflow: visible;
+    stroke: var(--wiggle-color);
 }
 
-.wiggle path {
-    fill: none;
-    stroke: var(--wiggle-color);
+.wiggle .line {
+    fill: currentColor;
     stroke-width: var(--wiggle-size);
     stroke-linecap: round;
     animation: wiggle var(--wiggle-speed) linear infinite;
     d: var(--wiggle);
+}
+
+.wiggle .bubble {
+    d: path("m 73,-6.5 a 5,5 0 0 0 -5,5 5,5 0 0 0 5,5 5,5 0 0 0 5,-5 5,5 0 0 0 -5,-5 z m -12,12 a 5,5 0 0 0 -5,5 5,5 0 0 0 5,5 5,5 0 0 0 5,-5 5,5 0 0 0 -5,-5 z m 16,4 a 5,5 0 0 0 -5,5 5,5 0 0 0 5,5 5,5 0 0 0 5,-5 5,5 0 0 0 -5,-5 z m -10.5,11 a 2.5,2.5 0 0 0 -2.5,2.5 2.5,2.5 0 0 0 2.5,2.5 2.5,2.5 0 0 0 2.5,-2.5 2.5,2.5 0 0 0 -2.5,-2.5 z");
+    overflow: visible;
+    fill: none;
+    animation: pop var(--wiggle-speed) linear infinite;
+    stroke-width: 0;
 }
 
 @keyframes wiggle {
@@ -27,6 +35,18 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-142.14285714285714px);
+    }
+}
+
+@keyframes pop {
+    0% {
+        stroke-width: 0;
+    }
+    50% {
+        stroke-width: .1rem;
+    }
+    100% {
+        stroke-width: 0;
     }
 }

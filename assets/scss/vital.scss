@@ -1,16 +1,15 @@
 @import "partials/display";
 @import "partials/text";
+@import "partials/colors";
 
 body {
     background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
 }
 
 .block {
     height: 90vh;
-}
-
-.color {
-    background-color: aliceblue;
 }
 
 .block-border {
@@ -24,4 +23,8 @@ body {
 
 .logo svg {
     width: 70vw;
+}
+
+.logo {
+    padding: 1rem 0;
 }
