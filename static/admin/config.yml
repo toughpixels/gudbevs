@@ -7,83 +7,14 @@ public_folder: /img
 collections:
   - name: 'reviews'
     label: 'Reviews'
-    folder: "content/reviews/{{year}}_{{month}}_{{day}}_{{brand}}_{{title}}/"
+    folder: 'content/reviews/{{slug}}'
     create: true
-    slug: 'index.md'
+    slug: 'index'
     media_folder: ''
     public_folder: ''
     editor:
       preview: false
     fields:
-<<<<<<< HEAD
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Quality", name: "categories", widget: "select", required: true, hint: "", default: 'bad', options: ['bad', 'okay', 'good'], multiple: false }
-      - {label: "Tags", name: "tags", widget: "select", required: true, hint: "", default: '', options: ['good at room temp', 'another tag', 'another tag 2'], multiple: true }
-      - {label: "Color Scheme", name: "theme", widget: "select", required: true, hint: "", default: 'theme1', options: ['theme1', 'theme2', 'theme3'], multiple: false }
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "pages"
-    label: "Pages"
-    folder: "content"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - {
-          label: "Title",
-          name: "title",
-          widget: "string",
-          hint: "",
-          required: true,
-        }
-      - {
-          label: "Weight",
-          name: "weight",
-          widget: "number",
-          hint: "Posts with lower numbers will appear before those with higher numbers.",
-        }
-      - {
-          label: "Description",
-          name: "description",
-          widget: "text",
-          hint: "A short description of what the page is about",
-          required: true,
-        }
-      - {
-          label: "Body",
-          name: "body",
-          widget: "markdown",
-          hint: "For an aside, copy/paste this: {{< aside >}}✨{{< /aside >}} and replace the stars with text",
-        }
-
-  - name: "unique"
-    label: "Unique Pages"
-    files:
-      - file: "content/_index.md"
-        label: "Home"
-        name: "home"
-        fields:
-          - {
-              label: "Title",
-              name: "title",
-              widget: "string",
-              hint: "",
-              required: true,
-            }
-          - {
-              label: "Description",
-              name: "description",
-              widget: "text",
-              hint: "A short description of what the page is about",
-              required: true,
-            }
-          - {
-              label: "Body",
-              name: "body",
-              widget: "markdown",
-              hint: "For an aside, copy/paste this: {{< aside >}}✨{{< /aside >}} and replace the stars with text",
-            }
-=======
       - { label: 'Brand', name: 'brand', iwidget: 'string' }
       - { label: 'Flavors', name: 'flavors', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
@@ -94,4 +25,3 @@ collections:
       - { label: 'The Medium', name: 'mediums', widget: 'string', required: false }
       - { label: 'The Bad', name: 'bads', widget: 'string', required: false }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
->>>>>>> 1b4fede77e78268eabdf9e30844355b1f29e02c2
