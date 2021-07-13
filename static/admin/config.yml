@@ -7,9 +7,9 @@ public_folder: /img
 collections:
   - name: 'reviews'
     label: 'Reviews'
-    folder: 'content/reviews/{{slug}}'
+    folder: 'content/reviews'
+    path: '{{slug}}/index'
     create: true
-    slug: 'index'
     media_folder: ''
     public_folder: ''
     editor:
