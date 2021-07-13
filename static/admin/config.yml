@@ -9,7 +9,7 @@ collections:
     label: 'Reviews'
     folder: "content/reviews/{{slug}}/"
     create: true
-    slug: 'index.md'
+    slug: 'index'
     media_folder: ''
     public_folder: ''
     editor:
