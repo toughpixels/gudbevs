@@ -1,64 +1,27 @@
-// tailwindcss reset
-@import "../../themes/base/assets/scss/partials/reset";
-
-// fancy mixins (move all to base?)
-@import "../../themes/base/assets/scss/mixins/generateUtilityClasses";
-@import "partials/generateContainerAndEdgeClasses";
-@import "partials/svg-uri";
-
-// other basics
-@import "partials/smoothscroll";
-
-// common project-specific vars
-@import "partials/colors";
-@import "partials/breakpoints";
-@import "../../themes/base/assets/scss/mixins/respond";
-@import "partials/gaps";
-@import "partials/grid";
-
-
-
-// functions
-@import "../../themes/base/assets/scss/mixins/color";
-@import "../../themes/base/assets/scss/mixins/gap";
-
-// quick mixins
-@import "../../themes/base/assets/scss/mixins/px";
-@import "../../themes/base/assets/scss/mixins/py";
-@import "../../themes/base/assets/scss/mixins/mx";
-@import "../../themes/base/assets/scss/mixins/space";
-
-
-
-
-// basic utility classes
-@import "../../themes/base/assets/scss/partials/sr-only";
-@import "../../themes/base/assets/scss/partials/icon";
-@import "../../themes/base/assets/scss/partials/darkBg";
-
-
-// common project-specific styles
+@import "partials/display";
 @import "partials/text";
-@import "partials/py-section";
-@import "partials/container";
-@import "partials/btn_textInput";
 
+body {
+    background-color: antiquewhite;
+}
 
-// useful (these exist only as mixins by default.  Generate CSS with them by entering the file and uncommenting the "@include" statement at the end)
-@import "partials/tabs";
+.block {
+    height: 90vh;
+}
 
-// later
+.color {
+    background-color: aliceblue;
+}
 
-@import "../../themes/base/assets/scss/utilities/colors";
-@import "../../themes/base/assets/scss/utilities/display";
-@import "../../themes/base/assets/scss/utilities/position";
-@import "../../themes/base/assets/scss/partials/fill";
-@import "../../themes/base/assets/scss/partials/flex";
-@import "partials/grid";
-@import "partials/label";
+.block-border {
+    border-top: 1px solid orange;
+    border-bottom: 1px solid red;
+}
 
+.top-border {
+    border-bottom: 1px solid black;
+}
 
-
-
-
-
+.logo svg {
+    width: 70vw;
+}

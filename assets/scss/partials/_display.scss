@@ -1,0 +1,29 @@
+.flex {
+    display:flex;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.c3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.g-row {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.absolute {
+    position: absolute;
+}

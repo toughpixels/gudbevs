@@ -1,0 +1,4 @@
+{{ range first 3 (where .Site.Pages "Section" "reviews").ByDate }}
+    {{ partial "review.html" . }}
+    {{ partial "wiggle.html" . }}
+{{ end }}

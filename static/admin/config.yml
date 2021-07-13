@@ -7,12 +7,15 @@ public_folder: /img
 collections:
   - name: 'reviews'
     label: 'Reviews'
-    folder: 'content/reviews'
+    folder: "content/reviews/{{year}}_{{month}}_{{day}}_{{brand}}_{{title}}/"
     create: true
-    slug: '{{slug}}'
+    slug: 'index.md'
+    media_folder: ''
+    public_folder: ''
     editor:
       preview: false
     fields:
+<<<<<<< HEAD
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Quality", name: "categories", widget: "select", required: true, hint: "", default: 'bad', options: ['bad', 'okay', 'good'], multiple: false }
       - {label: "Tags", name: "tags", widget: "select", required: true, hint: "", default: '', options: ['good at room temp', 'another tag', 'another tag 2'], multiple: true }
@@ -80,3 +83,15 @@ collections:
               widget: "markdown",
               hint: "For an aside, copy/paste this: {{< aside >}}✨{{< /aside >}} and replace the stars with text",
             }
+=======
+      - { label: 'Brand', name: 'brand', iwidget: 'string' }
+      - { label: 'Flavors', name: 'flavors', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Rating', name: 'rating', widget: 'number', min: 0, max: 10, step: 0.1 }
+      - { label: 'Image', name: 'image', widget: 'image', choose_url: false }
+      - { label: "Your Review:", name: "body", widget: "markdown" }
+      - { label: 'The Good', name: 'goods', widget: 'string', required: false }
+      - { label: 'The Medium', name: 'mediums', widget: 'string', required: false }
+      - { label: 'The Bad', name: 'bads', widget: 'string', required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+>>>>>>> 1b4fede77e78268eabdf9e30844355b1f29e02c2

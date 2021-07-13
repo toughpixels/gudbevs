@@ -1,6 +1,4 @@
 ---
-title: Gud Bevs
-weight: 0
-description: A seltzer guide
+title: GudBev's Official Seltzer Reviews
+description: Your effervescant guide to the chilled wide world of sparkling beverages.
 ---
-
