@@ -28,4 +28,5 @@ body {
 
 .grid-little-images {
     grid-template-columns: minmax(100px, 1fr);
+    grid-gap: 1rem;
 }
