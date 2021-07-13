@@ -1,0 +1,23 @@
+.wiggle .bubble {
+    d: path("m 73,-6.5 a 5,5 0 0 0 -5,5 5,5 0 0 0 5,5 5,5 0 0 0 5,-5 5,5 0 0 0 -5,-5 z m -12,12 a 5,5 0 0 0 -5,5 5,5 0 0 0 5,5 5,5 0 0 0 5,-5 5,5 0 0 0 -5,-5 z m 16,4 a 5,5 0 0 0 -5,5 5,5 0 0 0 5,5 5,5 0 0 0 5,-5 5,5 0 0 0 -5,-5 z m -10.5,11 a 2.5,2.5 0 0 0 -2.5,2.5 2.5,2.5 0 0 0 2.5,2.5 2.5,2.5 0 0 0 2.5,-2.5 2.5,2.5 0 0 0 -2.5,-2.5 z");
+    animation: pop var(--wiggle-speed) linear infinite;
+    stroke-width: 0;
+}
+
+.wiggle circle {
+    transform: translateX(12vw), translateY(1vw);
+    r: 0;
+    stroke-width: 1px;
+    animation: pop var(--wiggle-speed) linear infinite;
+}
+
+@keyframes pop {
+    0% {
+        stroke-width: 0;
+        r: 0;
+    }
+    100% {
+        stroke-width: .1rem;
+        r: 1vw;
+    }
+}
