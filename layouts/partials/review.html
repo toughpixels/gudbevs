@@ -1,20 +1,12 @@
 <div class="block color block-border">
     <div class="grid beverage">
-        {{ .Params.TextField }}<br />
-        {{ if .Params.IsCool }}
-        cool!
-        {{ else }}
-        not cool!
-        {{ end }}
-        <br />
-        {{ .Params.Color }}
-
-        {{ .Params.TheDate }}
-
-        {{ .Params.MyFile }}
-
-        {{ .Params.MyImage }}
-
+        <div class="splash">
+            {{ partial "image.html" . }}
+        </div>
+        <h2>{{.Title}}</h2>
+        <div>Rating: {{ .Params.rating }}</div>
+        <div>Brand: {{.Params.brand}}</div>
+        <div>{{.Params.flavors}}</div>
         {{ .Params.Testimonials }}
         {{ .Params.Title }}
         {{ .Params.Body }}

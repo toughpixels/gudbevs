@@ -16,3 +16,11 @@ theme = "base"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[params]
+  description = "."
+  title = "Gudbev's Sparkling Reviews"
+  headerImage  = "images/header.png"
+  author = "Tough Pixels"
+  imageSizes = "1280 840 360"
+  imageFormats = "webp jpg"

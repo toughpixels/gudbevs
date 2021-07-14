@@ -1,6 +1,7 @@
 <div class="navigation">
 <div class="grid c3 color">
     <h2 class="g-row">Navigation</h2>
+    {{ .Scratch.Set "imageSizes" "100" }}
     {{ range (where .Site.Pages "Section" "reviews").ByDate }}
         <div>preview image</div>
     {{ end }}

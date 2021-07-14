@@ -1,7 +1,14 @@
+.wiggle {
+    --pop-delay: 6s;
+    --pop-speed: calc(var(--wiggle-speed)/2);
+    --pop-variance: .2s;
+    --total-pop-time: calc(var(--wiggle-speed) + var(--pop-delay));
+}
+
 .wiggle circle {
-    animation: pop var(--wiggle-speed) linear infinite;
-    cx: 40;
-    cy: 8;
+    animation: pop var(--total-pop-time) linear infinite;
+    cx: 40px;
+    cy: 8px;
 }
 
 @keyframes pop {
@@ -18,8 +25,7 @@
         r: 6px;
         transform: translateX(7px) translateY(-18px);
     }
-    51% {
+    100% {
         stroke: none;
-        stroke-dasharray: 1;
     }
 }

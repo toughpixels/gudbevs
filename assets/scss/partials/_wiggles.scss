@@ -1,5 +1,4 @@
 .wiggle {
-    --wiggle-color: darkblue;
     --wiggle-size: .1rem;
     --wiggle-speed: 4s;
 }
@@ -17,7 +16,7 @@
     animation: wiggle var(--wiggle-speed) linear infinite;
 }
 
-#content > *:nth-child(even) .wiggle path {
+#content > *:nth-child(even) .wiggle .line {
     animation-direction: reverse;
 }
 
