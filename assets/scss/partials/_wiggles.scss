@@ -18,6 +18,7 @@
 
 #content > *:nth-child(even) .wiggle .line {
     animation-direction: reverse;
+    animation-duration: calc(var(--wiggle-speed) + 2s);
 }
 
 @keyframes wiggle {
