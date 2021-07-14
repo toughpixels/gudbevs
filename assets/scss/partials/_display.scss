@@ -10,8 +10,29 @@
     display: grid;
 }
 
+.justify-center {
+    justify-items: center;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: end;
+}
+
 .c3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.g-column {
+    grid-row-start: 1;
+    grid-row-end: -1;
 }
 
 .g-row {

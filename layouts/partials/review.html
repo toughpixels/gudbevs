@@ -1,15 +1,15 @@
-<div class="block color block-border">
     <div class="grid beverage">
-        <div class="splash">
-
+        <div class="g-column">
+            {{ partial "image.html" . }}
         </div>
         <h2>{{.Title}}</h2>
-        <div>Rating: {{ .Params.rating }}</div>
-        <div>Brand: {{.Params.brand}}</div>
-        <div>{{.Params.flavors}}</div>
-        {{ .Params.Testimonials }}
-        {{ .Params.Title }}
-        {{ .Params.Body }}
-    </div>}
-</div>
+        <div class="stuff">
+            <div>Rating: {{ .Params.rating }}</div>
+            <div>Brand: {{.Params.brand}}</div>
+            <div>Flavors: {{.Params.flavors}}</div>
+        </div>
+        <div class="review">
+            {{ .Content }}
+        </div>
+    </div>
 

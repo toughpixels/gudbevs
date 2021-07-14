@@ -16,6 +16,15 @@
 .welcome {
     @include transitionColor(var(--welcome), var(--navigation));
 }
+
 .navigation {
     @include transitionColor(var(--navigation), var(--closing));
+}
+
+.page {
+    @include transitionColor(var(--welcome), var(--closing));
+}
+
+.footer {
+    @include transitionColor(var(--closing), var(--closing))
 }
