@@ -27,6 +27,10 @@ body {
     width: 70vw;
 }
 
+.grid-little-images {
+    grid-template-columns: minmax(100px, 1fr);
+    grid-gap: 1rem;
+}
 .logo {
     padding: 1rem 0;
 }

@@ -1,10 +1,14 @@
 <div class="navigation">
 <div class="grid c3 color">
     <h2 class="g-row">Navigation</h2>
-    {{ .Scratch.Set "imageSizes" "100" }}
-    {{ range (where .Site.Pages "Section" "reviews").ByDate }}
-        <div>preview image</div>
-    {{ end }}
+    <div class="grid-little-images">
+        {{ .Scratch.Set "imageSizes" "100" }}
+        {{ range (where .Site.RegularPages "Section" "reviews").ByDate }}
+            {{.}}}
+            {{ partial "image.html" . }}
+        {{ end }}
+    </div>
+
 </div>
     {{ partial "wiggle.html" . }}
 </div>

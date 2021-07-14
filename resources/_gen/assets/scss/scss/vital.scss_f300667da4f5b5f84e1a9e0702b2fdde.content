@@ -1,0 +1,123 @@
+.flex {
+  display: flex; }
+
+.flex-center {
+  justify-content: center;
+  align-items: center; }
+
+.grid {
+  display: grid; }
+
+.c3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.g-row {
+  grid-column-start: 1;
+  grid-column-end: -1; }
+
+.w100 {
+  width: 100%; }
+
+.h100 {
+  height: 100%; }
+
+.absolute {
+  position: absolute; }
+
+body {
+  font-size: large; }
+
+.tc {
+  text-align: center; }
+
+:root {
+  --welcome: lightblue;
+  --navigation: lightgreen;
+  --closing: lightpink;
+  --wiggle-color: darkblue; }
+
+.welcome {
+  background-color: var(--welcome); }
+  .welcome .wiggle svg {
+    background-color: var(--navigation);
+    color: var(--welcome); }
+
+.navigation {
+  background-color: var(--navigation); }
+  .navigation .wiggle svg {
+    background-color: var(--closing);
+    color: var(--navigation); }
+
+.wiggle {
+  --wiggle-size: .1rem;
+  --wiggle-speed: 4s; }
+
+.wiggle svg {
+  overflow: visible;
+  stroke: var(--wiggle-color);
+  fill: none; }
+
+.wiggle .line {
+  fill: currentColor;
+  stroke-width: var(--wiggle-size);
+  stroke-linecap: round;
+  animation: wiggle var(--wiggle-speed) linear infinite; }
+
+#content > *:nth-child(even) .wiggle .line {
+  animation-direction: reverse; }
+
+@keyframes wiggle {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-142.14285714px); } }
+
+.wiggle {
+  --pop-delay: 6s;
+  --pop-speed: calc(var(--wiggle-speed)/2);
+  --pop-variance: .2s;
+  --total-pop-time: calc(var(--wiggle-speed) + var(--pop-delay)); }
+
+.wiggle circle {
+  animation: pop var(--total-pop-time) linear infinite;
+  cx: 40px;
+  cy: 8px; }
+
+@keyframes pop {
+  0% {
+    stroke-width: 0;
+    r: 0;
+    transform: translateX(0) translateY(0); }
+  25% {
+    transform: translateX(-7px) translateY(-8px); }
+  50% {
+    stroke-width: .1rem;
+    r: 6px;
+    transform: translateX(7px) translateY(-18px); }
+  100% {
+    stroke: none; } }
+
+body {
+  background-color: antiquewhite;
+  margin: 0;
+  padding: 0; }
+
+.block {
+  height: 90vh; }
+
+.block-border {
+  border-top: 1px solid orange;
+  border-bottom: 1px solid red; }
+
+.top-border {
+  border-bottom: 1px solid black; }
+
+.logo svg {
+  width: 70vw; }
+
+.grid-little-images {
+  grid-template-columns: minmax(100px, 1fr);
+  grid-gap: 1rem; }
+
+.logo {
+  padding: 1rem 0; }
