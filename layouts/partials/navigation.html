@@ -1,9 +1,9 @@
-<div class="grid c3">
+<div class="">
     <h2 class="g-row">Navigation</h2>
     <div class="grid-little-images">
         {{ range (where .Site.RegularPages "Section" "reviews").ByDate }}
-        {{ .Title }}
-    {{ end }}
+            {{- partial "image.html" . -}}
+        {{ end }}
     </div>
     
 </div>

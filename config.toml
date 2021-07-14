@@ -16,3 +16,6 @@ theme = "base"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[params]
+  imageSizes = "100"
