@@ -18,6 +18,9 @@
 .w100 {
   width: 100%; }
 
+.h100 {
+  height: 100%; }
+
 .absolute {
   position: absolute; }
 
@@ -27,14 +30,75 @@ body {
 .tc {
   text-align: center; }
 
+:root {
+  --welcome: lightblue;
+  --navigation: lightgreen;
+  --closing: lightpink; }
+
+.welcome {
+  background-color: var(--welcome); }
+  .welcome .wiggle svg {
+    background-color: var(--navigation);
+    color: var(--welcome); }
+
+.navigation {
+  background-color: var(--navigation); }
+  .navigation .wiggle svg {
+    background-color: var(--closing);
+    color: var(--navigation); }
+
+.wiggle {
+  --wiggle-color: darkblue;
+  --wiggle-size: .1rem;
+  --wiggle-speed: 4s; }
+
+.wiggle svg {
+  overflow: visible;
+  stroke: var(--wiggle-color);
+  fill: none; }
+
+.wiggle .line {
+  fill: currentColor;
+  stroke-width: var(--wiggle-size);
+  stroke-linecap: round;
+  animation: wiggle var(--wiggle-speed) linear infinite; }
+
+#content > *:nth-child(even) .wiggle path {
+  animation-direction: reverse; }
+
+@keyframes wiggle {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-142.14285714px); } }
+
+.wiggle circle {
+  animation: pop var(--wiggle-speed) linear infinite;
+  cx: 40;
+  cy: 8; }
+
+@keyframes pop {
+  0% {
+    stroke-width: 0;
+    r: 0;
+    transform: translateX(0) translateY(0); }
+  25% {
+    transform: translateX(-7px) translateY(-8px); }
+  50% {
+    stroke-width: .1rem;
+    r: 6px;
+    transform: translateX(7px) translateY(-18px); }
+  51% {
+    stroke: none;
+    stroke-dasharray: 1; } }
+
 body {
-  background-color: antiquewhite; }
+  background-color: antiquewhite;
+  margin: 0;
+  padding: 0; }
 
 .block {
   height: 90vh; }
-
-.color {
-  background-color: aliceblue; }
 
 .block-border {
   border-top: 1px solid orange;
@@ -49,3 +113,6 @@ body {
 .grid-little-images {
   grid-template-columns: minmax(100px, 1fr);
   grid-gap: 1rem; }
+
+.logo {
+  padding: 1rem 0; }

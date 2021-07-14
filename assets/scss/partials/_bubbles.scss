@@ -1,0 +1,25 @@
+.wiggle circle {
+    animation: pop var(--wiggle-speed) linear infinite;
+    cx: 40;
+    cy: 8;
+}
+
+@keyframes pop {
+    0% {
+        stroke-width: 0;
+        r: 0;
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(-7px) translateY(-8px);
+    }
+    50% {
+        stroke-width: .1rem;
+        r: 6px;
+        transform: translateX(7px) translateY(-18px);
+    }
+    51% {
+        stroke: none;
+        stroke-dasharray: 1;
+    }
+}

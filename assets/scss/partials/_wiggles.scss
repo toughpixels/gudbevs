@@ -1,25 +1,24 @@
 .wiggle {
-    --wiggle-height: 10vw;
-    --wiggle-width: 80vw;
-    --wiggle: path("M 0 10 c 2.04914649302637 0 1.9508535069736301 -4 4 -4 s 1.9508535069736301 4 4 4 s 1.9508535069736301 -4 4 -4 s 1.9508535069736301 4 4 4 s 1.9508535069736301 -4 4 -4 s 1.9508535069736301 4 4 4 s 1.9508535069736301 -4 4 -4");
-    --wiggle-color: green;
+    --wiggle-color: darkblue;
     --wiggle-size: .1rem;
-    --wiggle-speed: 8s;
+    --wiggle-speed: 4s;
 }
 
 .wiggle svg {
-    height: var(--wiggle-height);
-    width: var(--wiggle-width);
-    margin: auto;
+    overflow: visible;
+    stroke: var(--wiggle-color);
+    fill: none;
 }
 
-.wiggle path {
-    fill: none;
-    stroke: var(--wiggle-color);
+.wiggle .line {
+    fill: currentColor;
     stroke-width: var(--wiggle-size);
     stroke-linecap: round;
     animation: wiggle var(--wiggle-speed) linear infinite;
-    d: var(--wiggle);
+}
+
+#content > *:nth-child(even) .wiggle path {
+    animation-direction: reverse;
 }
 
 @keyframes wiggle {
@@ -27,6 +26,6 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-142.14285714285714px);
     }
 }

@@ -1,16 +1,17 @@
 @import "partials/display";
 @import "partials/text";
+@import "partials/colors";
+@import "partials/wiggles";
+@import "partials/bubbles";
 
 body {
     background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
 }
 
 .block {
     height: 90vh;
-}
-
-.color {
-    background-color: aliceblue;
 }
 
 .block-border {
@@ -29,4 +30,7 @@ body {
 .grid-little-images {
     grid-template-columns: minmax(100px, 1fr);
     grid-gap: 1rem;
+}
+.logo {
+    padding: 1rem 0;
 }

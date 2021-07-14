@@ -1,0 +1,20 @@
+:root {
+    --welcome: lightblue;
+    --navigation: lightgreen;
+    --closing: lightpink;
+}
+
+@mixin transitionColor($color, $newColor) {
+    background-color: $color;
+    .wiggle svg {
+        background-color: $newColor;
+        color: $color;
+    }
+}
+
+.welcome {
+    @include transitionColor(var(--welcome), var(--navigation));
+}
+.navigation {
+    @include transitionColor(var(--navigation), var(--closing));
+}
