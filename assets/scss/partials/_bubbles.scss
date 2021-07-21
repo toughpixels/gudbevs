@@ -7,8 +7,13 @@
 
 .wiggle circle {
     animation: pop var(--total-pop-time) linear infinite;
-    cx: 40px;
     cy: 8px;
+    @for $var from 1 to 13 {
+        &:nth-child(#{$var}) {
+            cx: calc(#{$var} * 20px);
+            r: 3px;
+        }
+    }
 }
 
 @keyframes pop {

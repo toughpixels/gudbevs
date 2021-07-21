@@ -15,7 +15,8 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Brand', name: 'brand', iwidget: 'string' }
+      - { label: 'List', name: 'list', widget: 'list' }
+      - { label: 'Brand', name: 'brand', widget: 'string' }
       - { label: 'Flavors', name: 'flavors', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Rating', name: 'rating', widget: 'number', min: 0, max: 10, step: 0.1 }
