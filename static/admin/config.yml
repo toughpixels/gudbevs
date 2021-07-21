@@ -32,8 +32,18 @@ collections:
     media_folder: ''
     public_folder: ''
     fields:
-      - { label: 'Brand', name: 'brand', collection: 'brand', widget: 'relation', search_fields: ['name'] }
-      - { label: 'Flavors', name: 'flavors', collection: 'flavors', widget: 'relation', search_fields: ['name'] }
+      - { label: 'Brand',
+          name: 'brand',
+          collection: 'brand',
+          widget: 'relation',
+          search_fields: ['name'],
+          value_field: 'name' }
+      - { label: 'Flavors',
+          name: 'flavors',
+          collection: 'flavors',
+          widget: 'relation',
+          search_fields: ['name'],
+          value_field: 'name' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Rating', name: 'rating', value_type: float, widget: 'number', min: 0, max: 10, step: 0.1 }
       - { label: 'Image', name: 'image', widget: 'image', choose_url: false }
