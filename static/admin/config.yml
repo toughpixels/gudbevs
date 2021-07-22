@@ -5,25 +5,6 @@ backend:
 media_folder: assets/img
 public_folder: /img
 collections:
-  - name: 'flavor'
-    label: 'Flavors'
-    create: true
-    folder: 'content/flavors'
-    path: '{{slug}}/_index'
-    media_folder: ''
-    public_folder: ''
-    fields:
-      - { label: 'Flavor', name: 'name', widget: 'string' }
-  - name: 'brand'
-    label: 'Brands'
-    create: true
-    folder: 'content/brands'
-    path: '{{slug}}/_index'
-    media_folder: ''
-    public_folder: ''
-    fields:
-      - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'Image', name: 'image', widget: 'image', choose_url: false, required: false }
   - name: 'reviews'
     label: 'Reviews'
     folder: 'content/reviews'
@@ -42,13 +23,82 @@ collections:
           name: 'flavors',
           collection: 'flavors',
           widget: 'relation',
+          multiple: true,
           search_fields: ['name'],
           value_field: 'name' }
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Rating', name: 'rating', value_type: float, widget: 'number', min: 0, max: 10, step: 0.1 }
       - { label: 'Image', name: 'image', widget: 'image', choose_url: false }
       - { label: "Your Review:", name: "body", widget: "markdown" }
-      - { label: 'The Good', name: 'goods', widget: 'string', required: false }
-      - { label: 'The Medium', name: 'mediums', widget: 'string', required: false }
-      - { label: 'The Bad', name: 'bads', widget: 'string', required: false }
+      - { label: 'The Good',
+          name: 'goods',
+          collection: 'good',
+          widget: 'relation',
+          multiple: true,
+          required: false,
+          search_fields: ['name'],
+          value_field: 'name' }
+      - { label: 'The Medium',
+          name: 'medium',
+          collection: 'medium',
+          widget: 'relation',
+          multiple: true,
+          required: false,
+          search_fields: ['name'],
+          value_field: 'name' }
+      - { label: 'The Bad',
+          name: 'bads',
+          collection: 'bad',
+          widget: 'relation',
+          multiple: true,
+          required: false,
+          search_fields: ['name'],
+          value_field: 'name' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+  - name: 'flavors'
+    label: 'Flavors'
+    create: true
+    folder: 'content/flavors'
+    path: '{{slug}}/_index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - { label: 'Flavor', name: 'name', widget: 'string' }
+  - name: 'brand'
+    label: 'Brands'
+    create: true
+    folder: 'content/brands'
+    path: '{{slug}}/_index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image', choose_url: false, required: false }
+  - name: 'good'
+    label: 'The Good Awards'
+    create: true
+    folder: 'content/awards/good'
+    path: '{{slug}}/_index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - { label: 'Good Award', name: 'name', widget: 'string' }
+  - name: 'medium'
+    label: 'The Medium Awards'
+    create: true
+    folder: 'content/awards/medium'
+    path: '{{slug}}/_index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - { label: 'Medium Award', name: 'name', widget: 'string' }
+  - name: 'bad'
+    label: 'The Bad Awards'
+    create: true
+    folder: 'content/awards/bad'
+    path: '{{slug}}/_index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - { label: 'Bad Award', name: 'name', widget: 'string' }
