@@ -4,6 +4,7 @@
     --closing: lightpink;
     --wiggle-color: darkblue;
     --light-background: white;
+    --dark-text-color: #03035d;
 }
 
 @mixin transitionColor($color, $newColor) {

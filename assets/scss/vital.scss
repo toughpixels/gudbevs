@@ -26,11 +26,12 @@ body {
 }
 
 .logo svg {
-    max-width: 50ch;
+    width: 70vw;
+    max-width: 90ch;
 }
 
 .mw-md {
-    max-width: 20ch;
+    max-width: 40ch;
 }
 
 .grid-little-images {
@@ -44,4 +45,8 @@ body {
 
 .h-sm {
     height: 3ch;
+}
+
+.underline {
+    text-decoration: underline;
 }
