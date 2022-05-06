@@ -1,6 +1,6 @@
 <div class="navigation">
 <div class="grid c3 justify-center align-end">
-    <h2 class="g-row">Browse Recent Reviews:</h2>
+    <h2 class="g-row underline">Recent Reviews</h2>
     {{ range (where .Site.RegularPages "Section" "reviews").ByDate }}
         {{ .Scratch.Set "imageSizes" "100" }}
         <a href="{{ .RelPermalink }}">

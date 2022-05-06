@@ -60,7 +60,7 @@ collections:
     label: 'Flavors'
     create: true
     folder: 'content/flavors'
-    path: '{{slug}}/_index'
+    path: '{{slug}}'
     media_folder: ''
     public_folder: ''
     fields:
@@ -69,7 +69,7 @@ collections:
     label: 'Brands'
     create: true
     folder: 'content/brands'
-    path: '{{slug}}/_index'
+    path: '{{slug}}'
     media_folder: ''
     public_folder: ''
     fields:
@@ -79,7 +79,7 @@ collections:
     label: 'The Good Awards'
     create: true
     folder: 'content/awards/good'
-    path: '{{slug}}/_index'
+    path: '{{slug}}'
     media_folder: ''
     public_folder: ''
     fields:
@@ -88,7 +88,7 @@ collections:
     label: 'The Medium Awards'
     create: true
     folder: 'content/awards/medium'
-    path: '{{slug}}/_index'
+    path: '{{slug}}'
     media_folder: ''
     public_folder: ''
     fields:

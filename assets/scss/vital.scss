@@ -27,6 +27,7 @@ body {
 
 .logo svg {
     width: 70vw;
+    max-width: 90ch;
 }
 
 .grid-little-images {
@@ -35,4 +36,8 @@ body {
 }
 .logo {
     padding: 1rem 0;
+}
+
+.underline {
+    text-decoration: underline;
 }
