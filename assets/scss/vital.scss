@@ -26,13 +26,22 @@ body {
 }
 
 .logo svg {
-    width: 70vw;
+    max-width: 50ch;
+}
+
+.mw-md {
+    max-width: 20ch;
 }
 
 .grid-little-images {
     grid-template-columns: minmax(100px, 1fr);
     grid-gap: 1rem;
 }
+
 .logo {
     padding: 1rem 0;
+}
+
+.h-sm {
+    height: 3ch;
 }

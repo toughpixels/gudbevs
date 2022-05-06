@@ -1,11 +1,13 @@
 .beverage {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(0, 1fr));;
+    grid-gap: .3rem;
+    padding: 1rem;
 }
 
 .beverage img {
     width: 100%;
     height: 100%;
+    padding: 1rem;
 }
 
 .can {

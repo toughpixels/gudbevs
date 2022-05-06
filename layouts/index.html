@@ -1,5 +1,12 @@
 {{ define "main" }}
-    {{ partial "logo.html" . }}
+    <div class="welcome">
+        {{ partial "logo.html" . }}
+    </div>
     {{ partial "navigation.html" . }}
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{{ end }}
+{{ define "footer" }}
+    <div class="mw-md">
+        {{ partial "footer.html" . }}
+    </div>
 {{ end }}

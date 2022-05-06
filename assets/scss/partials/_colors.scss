@@ -3,6 +3,7 @@
     --navigation: lightgreen;
     --closing: lightpink;
     --wiggle-color: darkblue;
+    --light-background: white;
 }
 
 @mixin transitionColor($color, $newColor) {
@@ -19,6 +20,10 @@
 
 .navigation {
     @include transitionColor(var(--navigation), var(--closing));
+}
+
+.light {
+    @include transitionColor(var(--light-background), var(--navigation));
 }
 
 .page {
