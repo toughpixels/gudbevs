@@ -1,0 +1,12 @@
+<div class="flex flex-center">
+    {{with .Site.GetPage "/flavors" }}
+    <div>
+    <h2 class="tc">{{ .Title }}</h2>
+    <div class="flex justify-around list">
+        {{ range .Pages }}
+            {{ partial "emojiflanked.html" . }}
+        {{ end }}
+    </div>
+</div>
+{{end}}
+</div>

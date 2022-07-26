@@ -1,4 +1,0 @@
----
-name: Coconut
-emoji: 🥥
----

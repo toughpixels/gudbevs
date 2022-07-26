@@ -1,0 +1,9 @@
+<div class="flex">
+{{ with .Params.emoji }}
+    <div>{{.}}</div>
+{{ end }}
+<a href="{{ .Permalink}}">{{ .Params.name }}</a>
+{{ with .Params.emoji }}
+    <div>{{.}}</div>
+{{ end }}
+</div>
