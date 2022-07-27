@@ -1,12 +1,10 @@
 <div class="navigation">
-    {{ partial "search.html" . }}
     <div class="grid c3 justify-center align-end">
         <h2 class="g-row underline">Recent Reviews</h2>
         {{ range (where .Site.RegularPages "Section" "reviews").ByDate }}
-            <a href="{{ .RelPermalink }}">
-                {{ partial "image.html" . }}
-            </a>
+            <a href="{{ .RelPermalink }}">{{.Title}}</a>
         {{ end }}
     </div>
+    {{ partial "search.html" . }}
     {{ partial "wiggle.html" . }}
 </div>
