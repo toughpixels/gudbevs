@@ -12,9 +12,9 @@ collections:
     create: true
     media_folder: ''
     public_folder: ''
-        fields:
-      - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'Icon', name: 'icon', widget: 'string' }
+      fields:
+        - { label: 'Name', name: 'name', widget: 'string' }
+        - { label: 'Icon', name: 'icon', widget: 'string' }
   - name: 'brands'
     label: 'Brands'
     folder: 'content/brands'
@@ -22,9 +22,9 @@ collections:
     create: true
     media_folder: ''
     public_folder: ''
-        fields:
-      - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'Image', name: 'image', widget: 'image' }
+      fields:
+        - { label: 'Name', name: 'name', widget: 'string' }
+        - { label: 'Image', name: 'image', widget: 'image' }
   - name: 'reviews'
     label: 'Reviews'
     folder: 'content/reviews'
