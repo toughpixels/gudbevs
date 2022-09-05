@@ -5,8 +5,8 @@ backend:
 media_folder: assets/img
 public_folder: /img
 collections:
-  - name: 'flavors'
-    label: 'Flavors'
+  - label: 'Flavors'
+    name: 'flavors'
     folder: 'content/flavors'
     path: '{{slug}}/index'
     create: true
@@ -15,8 +15,8 @@ collections:
       fields:
         - { label: 'Name', name: 'name', widget: 'string' }
         - { label: 'Icon', name: 'icon', widget: 'string' }
-  - name: 'brands'
-    label: 'Brands'
+  - label: 'Brands'
+    name: 'brands'
     folder: 'content/brands'
     path: '{{slug}}/index'
     create: true
@@ -25,8 +25,8 @@ collections:
       fields:
         - { label: 'Name', name: 'name', widget: 'string' }
         - { label: 'Image', name: 'image', widget: 'image' }
-  - name: 'reviews'
-    label: 'Reviews'
+  - label: 'Reviews'
+    name: 'reviews'
     folder: 'content/reviews'
     path: '{{slug}}/index'
     create: true
