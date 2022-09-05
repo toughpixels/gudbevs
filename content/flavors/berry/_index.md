@@ -1,3 +1,4 @@
 ---
 name: Berry
+icon: 🍓
 ---

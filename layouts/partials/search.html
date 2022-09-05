@@ -2,7 +2,7 @@
     {{with .Site.GetPage "/flavors" }}
     <div>
         <h2 class="tc">{{ .Title }}</h2>
-        <div class="flex justify-around list">
+        <div class="list grid c3">
             {{ range .Pages }}
                 {{ partial "emojiflanked.html" . }}
             {{ end }}
@@ -14,7 +14,7 @@
     <div class="flex flex-center">
         <div>
             <h2 class="tc">{{ .Title }}</h2>
-            <div class="flex justify-around list">
+            <div class="list grid c3">
                 {{ range .Pages }}
                     {{ partial "emojiflanked.html" . }}
                 {{ end }}

@@ -1,3 +1,4 @@
 ---
 name: Peach
+icon: 🍑
 ---
