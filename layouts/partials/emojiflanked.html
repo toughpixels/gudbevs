@@ -1,9 +1,6 @@
-<div class="flex">
-{{ with .Params.icon }}
-    <div>{{.}}</div>
-{{ end }}
-<a href="{{ .Permalink}}">{{ .Params.name }}</a>
-{{ with .Params.icon }}
-    <div>{{.}}</div>
-{{ end }}
+<div class="flex justify-center nice-clickable">
+    <a href="{{ .Permalink}}">{{ .Params.name }}</a>
+    {{ with .Params.icon }}
+        <div>{{.}}</div>
+    {{ end }}
 </div>

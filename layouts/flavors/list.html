@@ -1,8 +1,11 @@
 {{- define "main" }}
-<div class="flex flex-center justify-around">
+<div class="navigation">
+  <h1 class="tc">{{ .Title }}</h1>
+  <div class="ma-sm grid-3 grid justify-center">
     {{ range .Data.Pages }}
         {{ partial "emojiflanked.html" . }}
     {{ end }}
-  </ul>
+  </div>
+  {{ partial "wiggle.html" . }}
 </div>
 {{- end }}
