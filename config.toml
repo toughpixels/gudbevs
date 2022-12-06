@@ -8,9 +8,7 @@ theme = "base"
   category="categories"
   brand="brands"
   flavor="flavors"
-  good="goods"
-  medium="mediums"
-  bad="bads"
+  rating="rating"
 
 [markup]
   [markup.goldmark]

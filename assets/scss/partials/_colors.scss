@@ -1,9 +1,9 @@
 :root {
-    --welcome: lightblue;
-    --navigation: lightgreen;
-    --closing: lightpink;
-    --wiggle-color: darkblue;
-    --light-background: #faebd7;
+    --light-background: #e24666;
+    --welcome: #653d7c;
+    --navigation: #40a48e;
+    --closing: #b18eaa;
+    --wiggle-color: #007844;
     --dark-text-color: #03035d;
 }
 
@@ -33,4 +33,25 @@
 
 .footer {
     @include transitionColor(var(--closing), var(--closing))
+}
+
+.preview-can {
+    fill: var(--welcome);
+}
+
+.preview-can text {
+    fill: var(--dark-text-color);
+}
+
+.preview-can:hover, .preview-can:focus {
+    fill: url(#hover-gradient);
+    text-decoration: underline;
+}
+
+.first-stop {
+    stop-color: var(--wiggle-color);
+}
+
+.end-stop {
+    stop-color: var(--welcome);
 }

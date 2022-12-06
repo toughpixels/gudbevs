@@ -10,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    font-family: sans-serif;
 }
 
 .block {
@@ -56,3 +57,32 @@ body {
     width: 76vw;
     grid-gap: 1rem;
 }
+
+.flavor-icon {
+    font-size: xxx-large;
+    text-decoration: none;
+}
+
+.flavor-link {
+    font-size: larger;
+    text-decoration: none;
+}
+
+.preview-link {
+    text-decoration: none;
+}
+
+.icon-svg {
+    height: 4rem;
+}
+
+.m-top-sm {
+    margin-top: 1rem;
+}
+
+.m-bottom-md {
+    margin-bottom: 2rem;
+}
+
+
+
