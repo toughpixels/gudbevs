@@ -15,6 +15,8 @@ collections:
     fields:
       - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'Icon', name: 'icon', widget: 'string' }
+      - { label: 'Icon SVG', name: 'svg', widget: 'string' }
+      - { label: 'Icon Viewbox', name: 'viewbox', widget: 'string' }
   - label: 'Brands'
     name: 'brands'
     folder: 'content/brands'
@@ -24,7 +26,8 @@ collections:
     public_folder: ''
     fields:
       - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Icon SVG', name: 'svg', widget: 'string', required: false }
+      - { label: 'Icon Viewbox', name: 'viewbox', widget: 'string', required: false }
   - label: 'Reviews'
     name: 'reviews'
     folder: 'content/reviews'
@@ -49,5 +52,5 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Rating', name: 'rating', value_type: float, widget: 'number', min: 0, max: 10, step: 0.1 }
-      - { label: 'Image', name: 'image', widget: 'image', choose_url: false }
+      - { label: 'Image', name: 'image', widget: 'image', choose_url: false, required: false }
       - { label: "Your Review:", name: "body", widget: "markdown" }

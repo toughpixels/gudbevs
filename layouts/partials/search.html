@@ -4,7 +4,7 @@
         <h2 class="tc">{{ .Title }}</h2>
         <div class="list grid c2">
             {{ range .Pages }}
-                {{ partial "emojiflanked.html" . }}
+                {{ partial "link-icon.html" . }}
             {{ end }}
         </div>
     </div>
@@ -16,7 +16,7 @@
             <h2 class="tc">{{ .Title }}</h2>
             <div class="list grid c2">
                 {{ range .Pages }}
-                    {{ partial "emojiflanked.html" . }}
+                    {{ partial "link-icon.html" . }}
                 {{ end }}
             </div>
         </div>
