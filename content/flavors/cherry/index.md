@@ -1,0 +1,4 @@
+---
+name: Cherry
+icon: 🍒
+---
