@@ -1,0 +1,12 @@
+<div>
+    <a href="{{ .Permalink}}" class="flavor-link tc">
+      {{ $brand := .Params.brand }}
+      {{ with .Site.GetPage "/brands" }}
+      {{ with .GetPage $brand }}
+        {{ partial "svg" . }}
+        {{ end }}
+      {{ end }}
+      <div class="underline m-top-sm">{{ .Title }}</div>
+    </a>
+</div>
+  

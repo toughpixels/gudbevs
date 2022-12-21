@@ -1,4 +1,4 @@
 ---
-name: Grapefruit
+title: Grapefruit
 icon: 🍊
 ---

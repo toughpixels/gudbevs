@@ -1,4 +1,0 @@
----
-name: Watermelon
-icon: 🍉
----

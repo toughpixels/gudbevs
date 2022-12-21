@@ -1,4 +1,4 @@
 ---
-name: Berry
+title: Berry
 icon: 🍓
 ---

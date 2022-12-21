@@ -1,4 +1,4 @@
 ---
-name: Cherry
+title: Cherry
 icon: 🍒
 ---

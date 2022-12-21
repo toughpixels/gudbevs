@@ -1,4 +1,4 @@
 ---
-name: Lemon
+title: Lemon
 icon: 🍋
 ---

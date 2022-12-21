@@ -1,4 +1,4 @@
 ---
-name: Watermelon
+title: Watermelon
 icon: 🍉
 ---

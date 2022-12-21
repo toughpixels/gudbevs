@@ -1,21 +1,19 @@
-    <div class="grid beverage">
-        <div class="g-column">
-            {{ partial "beverage.html" . }}
-        </div>
-        <div>
-            <h2>{{.Title}}</h2>
-            <div class="stuff">
-                <div>Rating: {{ .Params.rating }}</div>
-                <div>Brand: {{.Params.brand}}</div>
-                <div>Flavors: 
-                    {{ range .Params.flavors }}
-                        <span>{{ . }}</span>
-                    {{ end }}
-                </div>
-            </div>
-            <div class="review">
-                {{ .Content }}
-            </div>
-        </div>
-    </div>
-
+{{ $page := . }}
+<div class="grid c2 beverage">
+  <div class="g-column">{{ partial "beverage.html" . }}</div>
+  <div>
+    <h2>{{.Title}}</h2>
+    {{ partial "rating" .Params.rating }}
+    <div class="review">{{ .Content }}</div>
+  </div>
+</div>
+<div class="associated-flavors">
+    {{ range .Params.flavors }}
+        {{ $flavor := . }}
+        {{ with $page.Site.GetPage "/flavors" }}
+            {{ with .GetPage $flavor }}
+                
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</div>

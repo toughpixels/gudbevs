@@ -15,6 +15,10 @@
     }
 }
 
+html {
+    background-color: var(--light-background);
+}
+
 .welcome {
     @include transitionColor(var(--welcome), var(--navigation));
 }
@@ -28,7 +32,7 @@
 }
 
 .page {
-    @include transitionColor(var(--welcome), var(--closing));
+    @include transitionColor(var(--light-background), var(--navigation));
 }
 
 .footer {

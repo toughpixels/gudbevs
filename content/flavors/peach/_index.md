@@ -1,4 +1,4 @@
 ---
-name: Peach
+title: Peach
 icon: 🍑
 ---

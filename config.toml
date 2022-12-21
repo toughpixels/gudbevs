@@ -1,12 +1,10 @@
-baseURL = "https://naughty-visvesvaraya-ec04e9.netlify.app/"
+baseURL = "https://gudbevs.netlify.app/"
 languageCode = "en-us"
 title = "Gudbev's Sparkling Reviews"
 theme = "base"
-description = "Explore our wide selection of sparking beverage reviews. Sparkling water is our passion, so please enjoy these thirst quenching thoughts."
+description = "Explore our wide selection of sparking beverage reviews. Sparkling water is our passion, so enjoy these thirst quenching thoughts."
 
 [taxonomies]
-  tag="tags"
-  category="categories"
   brand="brands"
   flavor="flavors"
   rating="rating"
