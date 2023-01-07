@@ -14,9 +14,9 @@ collections:
     public_folder: ''
     fields:
       - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'Icon', name: 'icon', widget: 'string' }
-      - { label: 'Icon SVG', name: 'svg', widget: 'string' }
-      - { label: 'Icon Viewbox', name: 'viewbox', widget: 'string' }
+      - { label: 'Icon', name: 'icon', widget: 'string', required: false }
+      - { label: 'Icon SVG', name: 'svg', widget: 'string', required: false }
+      - { label: 'Icon Viewbox', name: 'viewbox', widget: 'string', required: false }
   - label: 'Brands'
     name: 'brands'
     folder: 'content/brands'
