@@ -1,7 +1,7 @@
 {{- define "main" }}
 <div class="navigation">
   <div class="pa-sm grid c2 justify-center">
-    {{ range .Pages }}
+    {{ range .Data.Pages }}
         {{ partial "link-taxonomy-icon.html" . }}
     {{ end }}
   </div>
