@@ -40,15 +40,15 @@ collections:
           name: 'brand',
           collection: 'brands',
           widget: 'relation',
-          search_fields: ['name'],
-          value_field: 'name' }
+          search_fields: ['title'],
+          value_field: 'title' }
       - { label: 'Flavors',
           name: 'flavors',
           collection: 'flavors',
           widget: 'relation',
           multiple: true,
-          search_fields: ['name'],
-          value_field: 'name' }
+          search_fields: ['title'],
+          value_field: 'title' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Rating', name: 'rating', value_type: float, widget: 'number', min: 0, max: 10, step: 0.1 }
