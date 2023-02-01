@@ -8,7 +8,7 @@ collections:
   - label: 'Flavors'
     name: 'flavors'
     folder: 'content/flavors'
-    path: '{{name}}/index'
+    path: '{{name}}/_index'
     create: true
     media_folder: ''
     public_folder: ''
@@ -20,7 +20,7 @@ collections:
   - label: 'Brands'
     name: 'brands'
     folder: 'content/brands'
-    path: '{{name}}/index'
+    path: '{{name}}/_index'
     create: true
     media_folder: ''
     public_folder: ''
