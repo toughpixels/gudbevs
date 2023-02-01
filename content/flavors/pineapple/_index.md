@@ -1,0 +1,4 @@
+---
+title: Pineapple
+icon: 🍍
+---
