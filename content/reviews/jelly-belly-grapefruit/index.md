@@ -2,7 +2,7 @@
 brand: Jelly Belly
 flavors:
   - Grapefruit
-title: Jelly Belly Grapefruit
+title: Grapefruit
 description: One of best grapefruits
 rating: 7.5
 date: 2021-07-22T00:32:25.070Z
