@@ -31,8 +31,7 @@ collections:
   - label: 'Reviews'
     name: 'reviews'
     folder: 'content/reviews'
-    slug: '{{brand}}-{{slug}}'
-    path: '{{slug}}/index'
+    path: '{{brand}}-{{slug}}/index'
     create: true
     media_folder: ''
     public_folder: ''
