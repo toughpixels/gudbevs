@@ -2,7 +2,7 @@
     {{with .Site.GetPage "/flavors" }}
     <div>
         <h2 class="tc">{{ .Title }}</h2>
-        <div class="list grid c2">
+        <div class="list grid c4">
             {{ range .Pages }}
                 {{ partial "link-taxonomy-icon.html" . }}
             {{ end }}
