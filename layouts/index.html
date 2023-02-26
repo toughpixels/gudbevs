@@ -2,7 +2,7 @@
 <div class="navigation">
     <div class="grid c2 justify-center align-center">
         <h2 class="g-row">Recent Reviews</h2>
-        {{ range (where .Site.RegularPages "Section" "reviews").ByDate }}
+        {{ range first 6 (where .Site.RegularPages "Section" "reviews").ByDate }}
             {{ partial "canned-preview" . }}
         {{ end }}
     </div>

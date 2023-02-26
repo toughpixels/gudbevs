@@ -1,8 +1,9 @@
 {{- define "main" }}
 <div class="navigation">
+  <h1 class="tc">{{.Title}} Flavored Seltzers</h1>
   <div class="pa-sm grid c2 justify-center">
     {{ range .Data.Pages.ByDate }}
-        {{ partial "link-taxonomy-icon.html" . }}
+        {{ partial "canned-preview.html" . }}
     {{ end }}
   </div>
   {{ partial "wiggle.html" . }}
