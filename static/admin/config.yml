@@ -5,29 +5,6 @@ backend:
 media_folder: assets/img
 public_folder: /img
 collections:
-  - label: 'Flavors'
-    name: 'flavors'
-    folder: 'content/flavors'
-    path: '{{title}}/_index'
-    create: true
-    media_folder: ''
-    public_folder: ''
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Emoji Icon', name: 'icon', widget: 'string', required: false }
-      - { label: 'Icon SVG', name: 'svg', widget: 'string', required: false }
-      - { label: 'Icon Viewbox', name: 'viewbox', widget: 'string', required: false }
-  - label: 'Brands'
-    name: 'brands'
-    folder: 'content/brands'
-    path: '{{title}}/_index'
-    create: true
-    media_folder: ''
-    public_folder: ''
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Icon SVG', name: 'svg', widget: 'string', required: false }
-      - { label: 'Icon Viewbox', name: 'viewbox', widget: 'string', required: false }
   - label: 'Reviews'
     name: 'reviews'
     folder: 'content/reviews'
@@ -54,3 +31,26 @@ collections:
       - { label: 'Rating', name: 'rating', value_type: float, widget: 'number', min: 0, max: 10, step: 0.1 }
       - { label: 'Image', name: 'image', widget: 'image', choose_url: false, required: false }
       - { label: "Your Review:", name: "body", widget: "markdown" }
+  - label: 'Flavors'
+    name: 'flavors'
+    folder: 'content/flavors'
+    path: '{{title}}/_index'
+    create: true
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Emoji Icon', name: 'icon', widget: 'string', required: false }
+      - { label: 'Icon SVG', name: 'svg', widget: 'string', required: false }
+      - { label: 'Icon Viewbox', name: 'viewbox', widget: 'string', required: false }
+  - label: 'Brands'
+    name: 'brands'
+    folder: 'content/brands'
+    path: '{{title}}/_index'
+    create: true
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Icon SVG', name: 'svg', widget: 'string', required: false }
+      - { label: 'Icon Viewbox', name: 'viewbox', widget: 'string', required: false }
