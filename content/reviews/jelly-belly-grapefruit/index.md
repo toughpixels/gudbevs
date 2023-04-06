@@ -1,5 +1,5 @@
 ---
-brand: Jelly Belly
+brands: Jelly Belly
 flavors:
   - Grapefruit
 title: Grapefruit

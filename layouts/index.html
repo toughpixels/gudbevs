@@ -1,5 +1,6 @@
 {{ define "main" }}
 <div class="navigation">
+    <div class="container">
     <div class="grid c2 justify-center align-center">
         <h2 class="g-row">Recent Reviews</h2>
         {{ range first 6 (where .Site.RegularPages "Section" "reviews").ByDate }}
@@ -7,6 +8,7 @@
         {{ end }}
     </div>
     {{ partial "search.html" . }}
+    </div>
     {{ partial "wiggle.html" . }}
 </div>
 {{ end }}

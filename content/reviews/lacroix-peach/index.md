@@ -1,5 +1,5 @@
 ---
-brand: Waterloo
+brands: Waterloo
 flavors:
   - Peach
   - Berry

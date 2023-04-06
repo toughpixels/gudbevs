@@ -1,6 +1,6 @@
 {{- define "main" }}
 <div class="navigation">
-  <h1 class="tc">{{.Title}} Flavored Seltzers</h1>
+  <h1 class="tc no-color-bar-top">{{.Title}} Seltzers</h1>
   <div class="pa-sm grid c2 justify-center">
     {{ range .Data.Pages.ByDate }}
         {{ partial "canned-preview.html" . }}

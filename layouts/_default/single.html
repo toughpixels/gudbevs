@@ -1,6 +1,7 @@
 {{- define "main" }}
-    <div class="">
-        {{ partial "review.html" . }}
+    <div class="container">
+        {{ partial "review/review.html" . }}
+        {{ partial "review/see-more.html" . }}
         {{ partial "wiggle.html" . }}
     </div>
 {{- end }}

@@ -43,8 +43,8 @@ collections:
       - { label: 'Emoji Icon', name: 'icon', widget: 'string', required: false }
       - { label: 'Icon SVG', name: 'svg', widget: 'string', required: false }
       - { label: 'Icon Viewbox', name: 'viewbox', widget: 'string', required: false }
-  - label: 'Brands'
-    name: 'brands'
+  - label: 'Brand'
+    name: 'brand'
     folder: 'content/brands'
     path: '{{title}}/_index'
     create: true

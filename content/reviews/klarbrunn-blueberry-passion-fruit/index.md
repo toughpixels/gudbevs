@@ -1,5 +1,5 @@
 ---
-brand: Klarbrunn
+brands: Klarbrunn
 flavors:
   - Blueberry
   - Passion Fruit

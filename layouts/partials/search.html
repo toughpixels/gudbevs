@@ -1,5 +1,5 @@
 {{ $flavors := site.Taxonomies.flavors.ByCount }}
-{{ $brands := site.Taxonomies.brands.ByCount }}
+{{ $brand := site.Taxonomies.brand.ByCount }}
 
 {{with .Site.GetPage "/flavors" }}
 <div class="flex flex-center">
@@ -13,7 +13,7 @@
     </div>
 </div>    
 {{end}}
-{{with .Site.GetPage "/brands" }}
+{{with .Site.GetPage "/brand" }}
     <div class="flex flex-center m-bottom-md">
         <div>
             <h2 class="tc">{{ .Title }}</h2>

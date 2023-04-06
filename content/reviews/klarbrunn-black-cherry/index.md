@@ -1,5 +1,5 @@
 ---
-brand: Klarbrunn
+brands: Klarbrunn
 flavors:
   - Cherry
 title: Klarbrunn Black Cherry

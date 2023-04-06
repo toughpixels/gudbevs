@@ -1,5 +1,5 @@
 ---
-brand: LaCroix
+brands: LaCroix
 flavors:
   - Berry
 title: LaCroix Berry

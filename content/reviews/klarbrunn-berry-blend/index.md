@@ -1,5 +1,5 @@
 ---
-brand: Klarbrunn
+brands: Klarbrunn
 flavors:
   - Berry
 title: Berry Blend

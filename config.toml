@@ -7,7 +7,7 @@ description = "Explore our wide selection of sparking beverage reviews. Sparklin
 [taxonomies]
   brand="brands"
   flavor="flavors"
-  rating="rating"
+  rating="ratings"
 
 [markup]
   [markup.goldmark]
