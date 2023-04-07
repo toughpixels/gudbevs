@@ -1,7 +1,10 @@
 {{- define "main" }}
+    <div class="navigation">
     <div class="container">
         {{ partial "review/review.html" . }}
         {{ partial "review/see-more.html" . }}
-        {{ partial "wiggle.html" . }}
+
     </div>
+    {{ partial "wiggle.html" . }}
+</div>
 {{- end }}

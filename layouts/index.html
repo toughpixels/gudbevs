@@ -1,20 +1,16 @@
 {{ define "main" }}
 <div class="navigation">
-    <div class="container">
+  <div class="container">
     <div class="grid c2 justify-center align-center">
-        <h2 class="g-row">Recent Reviews</h2>
-        {{ range first 6 (where .Site.RegularPages "Section" "reviews").ByDate }}
-            {{ partial "canned-preview" . }}
-        {{ end }}
+      <h2 class="g-row">Recent Reviews</h2>
+      {{ range first 6 (where .Site.RegularPages "Section" "reviews").ByDate }}
+      {{ partial "canned-preview" . }} {{ end }}
     </div>
     {{ partial "search.html" . }}
-    </div>
-    {{ partial "wiggle.html" . }}
+  </div>
+  {{ partial "wiggle.html" . }}
 </div>
-{{ end }}
-{{ define "footer" }}
-    <div class="mw-md">
-        {{ partial "footer.html" . }}
-    </div>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{{ end }} {{ define "footer" }}
+<div class="mw-md">{{ partial "footer.html" . }}</div>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 {{ end }}

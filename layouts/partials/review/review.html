@@ -1,19 +1,9 @@
 {{ $page := . }}
 <div class="grid c2 beverage">
-  <div class="g-column">{{ partial "beverage.html" . }}</div>
+  <div class="g-column">{{ partial "review/beverage.html" . }}</div>
   <div>
     <h2>{{.Title}}</h2>
-    {{ partial "rating" .Params.rating }}
+    {{ partial "review/rating" .Params.rating }}
     <div class="review">{{ .Content }}</div>
   </div>
-</div>
-<div class="associated-flavors">
-    {{ range .Params.flavors }}
-        {{ $flavor := . }}
-        {{ with $page.Site.GetPage "/flavors" }}
-            {{ with .GetPage $flavor }}
-                
-            {{ end }}
-        {{ end }}
-    {{ end }}
 </div>
