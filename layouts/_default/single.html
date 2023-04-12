@@ -2,7 +2,19 @@
     <div class="navigation">
     <div class="container">
         {{- partial "review/review.html" . -}}
-        {{- partial "review/see-more.html" . -}}
+        <h3 class="tc">See More</h3>
+        <div class="flex flex-center ma-sm">
+            {{ range .GetTerms "brands" }}
+            <div class="ma-sm">
+                {{- partial "link-taxonomy-icon" . }}
+            </div>
+            {{ end }}
+            {{ range .GetTerms "flavors" }}
+            <div class="ma-sm">
+                {{- partial "link-taxonomy-icon" . }}
+            </div>
+            {{ end }}
+        </div>
     </div>
     <div class="review-end-wiggle">
         {{- partial "wiggle.html" . }}
