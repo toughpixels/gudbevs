@@ -11,7 +11,7 @@
 .font-default {
     letter-spacing: normal;
     font-family: 'Lora', system-ui, sans-serif;
-    font-size: 2em;
+    font-size: 1.2em;
     word-wrap: break-word;
 }
 
@@ -38,13 +38,6 @@ h1,h2,h3,h4,h5,h6 {
     text-decoration-thickness: 0.1rem;
 }
 
-@media screen and (min-width: 768px) {
-    .wavy {
-        font-size: calc(4 * 1rem);
-    }
-}
-
-
 @media screen and (min-width: 1272px) {
     h1,h2 {
         font-size: calc(4 * 1rem);
@@ -52,11 +45,17 @@ h1,h2,h3,h4,h5,h6 {
     .wavy {
         text-decoration-thickness: .3rem;
     }
+    .font-default {
+        font-size: 2em;
+    }
 }
 
 @media screen and (min-width: 768px), screen and (max-width: calc(1271px)) and (orientation: landscape) {
     h1,h2 {
         font-size: calc((4 - 1) * 1.2vw + 1rem);
+    }
+    .font-default {
+        font-size: 1.5em;
     }
     .wavy {
         text-decoration-thickness: .2rem;
