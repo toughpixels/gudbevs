@@ -1,7 +1,52 @@
-body {
-    font-size: large;
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url("/fonts/Lora-VariableFont_wght.ttf");
+}
+
+.font-default {
+    letter-spacing: normal;
+    font-family: 'Lora', system-ui, sans-serif;
+    font-size: x-large;
+    word-wrap: break-word;
+}
+
+a {
+    font-weight: 500;
 }
 
 .tc {
     text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.larger {
+    font-size: larger;
+}
+
+
+.wavy {
+    text-decoration-style: wavy;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.2rem;
+}
+
+@media screen and (min-width: 1272px) {
+    h1,h2 {
+        font-size: calc(4 * 1rem);
+    }
+}
+
+@media screen and (min-width: 768px), screen and (max-width: calc(1271px)) and (orientation: landscape) {
+    h1,h2 {
+        font-size: calc((4 - 1) * 1.2vw + 1rem);
+    }
 }

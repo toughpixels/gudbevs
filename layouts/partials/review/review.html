@@ -1,9 +1,10 @@
 {{ $page := . }}
 <div class="grid c2 beverage">
-  <div class="g-column">{{ partial "review/beverage.html" . }}</div>
+  <div class="g-column">{{- partial "review/beverage.html" . }}</div>
   <div>
-    <h2>{{.Title}}</h2>
-    {{ partial "review/rating" .Params.rating }}
+    <h2>{{.Params.brands}} {{.Title}}</h2>
+    {{- partial "review/rating" .Params.rating }}
     <div class="review">{{ .Content }}</div>
   </div>
 </div>
+

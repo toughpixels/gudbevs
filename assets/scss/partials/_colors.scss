@@ -35,6 +35,10 @@ html {
     @include transitionColor(var(--light-background), var(--navigation));
 }
 
+.review-end-wiggle {
+    @include transitionColor(var(--navigation), var(--closing))
+}
+
 .footer {
     @include transitionColor(var(--closing), var(--closing))
 }

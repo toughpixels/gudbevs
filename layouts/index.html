@@ -1,16 +1,41 @@
 {{ define "main" }}
+{{ $flavors := site.Taxonomies.flavors.ByCount }}
+{{ $brand := site.Taxonomies.brand.ByCount }}
 <div class="navigation">
   <div class="container">
     <div class="grid c2 justify-center align-center">
-      <h2 class="g-row">Recent Reviews</h2>
-      {{ range first 6 (where .Site.RegularPages "Section" "reviews").ByDate }}
-      {{ partial "canned-preview" . }} {{ end }}
+      <h2 class="g-row wavy">Recent Reviews</h2>
+      {{ range first 4 (where .Site.RegularPages "Section" "reviews").ByDate }}
+      {{- partial "canned-preview" . }} {{ end }}
     </div>
-    {{ partial "search.html" . }}
+    {{with .Site.GetPage "/flavors" }}
+    <div class="flex flex-center">
+        <div>
+            <h2 class="tc wavy">{{ .Title }}</h2>
+            <div class="list grid c4">
+                {{ range $flavors }}
+                    {{- partial "link-taxonomy-icon.html" .Page }}
+                {{ end }}
+            </div>
+        </div>
+    </div>    
+    {{end}}
+    {{with .Site.GetPage "/brands" }}
+        <div class="flex flex-center mb-md">
+            <div>
+                <h2 class="tc wavy">{{ .Title }}</h2>
+                <div class="list grid c2">
+                    {{ range .Pages }}
+                        {{- partial "link-taxonomy-icon.html" . }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    {{end}}
   </div>
-  {{ partial "wiggle.html" . }}
+  {{- partial "wiggle.html" . }}
 </div>
 {{ end }} {{ define "footer" }}
-<div class="mw-md">{{ partial "footer.html" . }}</div>
+<div class="mw-md">{{- partial "footer.html" . }}</div>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 {{ end }}

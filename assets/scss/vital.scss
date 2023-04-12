@@ -8,18 +8,13 @@
 :root {
     --distance-sm: 1rem;
     --distance-md: 2rem;
+    --distance-lg: 4rem;
 }
 
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    font-family: system-ui, sans-serif;
-    font-size: x-large;
-}
-
-.larger {
-    font-size: larger;
 }
 
 .block {
@@ -84,11 +79,11 @@ body {
     margin-top: var(--distance-sm);
 }
 
-.m-bottom-md {
+.mb-md {
     margin-bottom: var(--distance-md);
 }
 
-.m-bottom-sm {
+.mb-sm {
     margin-bottom: var(--distance-sm);
 }
 
@@ -96,6 +91,14 @@ body {
     margin: var(--distance-sm);
 }
 
+.mt-none {
+    margin-top: 0;
+}
+
 .pa-sm {
     padding: var(--distance-sm);
+}
+
+.pa-lg {
+    padding: var(--distance-lg);
 }

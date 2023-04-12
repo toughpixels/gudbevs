@@ -1,10 +1,11 @@
 {{- define "main" }}
     <div class="navigation">
     <div class="container">
-        {{ partial "review/review.html" . }}
-        {{ partial "review/see-more.html" . }}
-
+        {{- partial "review/review.html" . -}}
+        {{- partial "review/see-more.html" . -}}
     </div>
-    {{ partial "wiggle.html" . }}
+    <div class="review-end-wiggle">
+        {{- partial "wiggle.html" . }}
+    </div>
 </div>
 {{- end }}
