@@ -107,6 +107,11 @@ body {
     filter: drop-shadow(2px 4px 6px black);
 }
 
+.small-flavor-icon {
+    filter: drop-shadow(1px 2px 4px black);
+
+}
+
 .flavor-link:hover .flavor-icon, .flavor-link:focus .flavor-icon {
     filter: drop-shadow(3px 6px 12px var(--light-background));
 }
@@ -143,7 +148,7 @@ body {
 }
 
 .review-link .icon-svg {
-    height: 1rem;
+    height: 1.75rem;
 }
 
 .review-link:hover {
