@@ -5,7 +5,7 @@
 <div class="flex flex-center">
     <div>
         <h2 class="tc wavy">{{ .Title }}</h2>
-        <div class="list grid c4">
+        <div class="list grid max-width c4 gap-sm">
             {{ range $flavors }}
                 {{- partial "link-taxonomy-icon.html" .Page }}
             {{ end }}
@@ -17,7 +17,7 @@
     <div class="flex flex-center mb-md">
         <div>
             <h2 class="tc wavy">{{ .Title }}</h2>
-            <div class="list grid c2">
+            <div class="list grid max-width c2 gap-sm">
                 {{ range .Pages }}
                     {{- partial "link-taxonomy-icon.html" . }}
                 {{ end }}

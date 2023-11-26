@@ -3,7 +3,7 @@
 {{ $brand := site.Taxonomies.brand.ByCount }}
 <div class="navigation">
   <div class="container">
-    <div class="grid c2 justify-center align-center">
+    <div class="grid max-width gap-sm c2 justify-center align-center">
       <h2 class="g-row wavy tc">Recent Reviews</h2>
       {{ range first 4 (where .Site.RegularPages "Section" "reviews").ByDate }}
       {{- partial "canned-preview" . }} {{ end }}
@@ -12,7 +12,7 @@
     <div class="flex flex-center">
         <div>
             <h2 class="tc wavy">{{ .Title }}</h2>
-            <div class="list grid c4">
+            <div class="list grid max-width c4 gap-sm">
                 {{ range $flavors }}
                     {{- partial "link-taxonomy-icon.html" .Page }}
                 {{ end }}
@@ -24,7 +24,7 @@
         <div class="flex flex-center mb-md">
             <div>
                 <h2 class="tc wavy">{{ .Title }}</h2>
-                <div class="list grid c2">
+                <div class="list grid c2 max-width brand-logos gap-sm">
                     {{ range .Pages }}
                         {{- partial "link-taxonomy-icon.html" . }}
                     {{ end }}

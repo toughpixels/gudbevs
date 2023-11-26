@@ -1,23 +1,24 @@
 {{- define "main" }}
-    <div class="navigation">
-    <div class="container">
-        {{- partial "review/review.html" . -}}
-        <h3 class="tc wavy">See More</h3>
-        <div class="flex flex-center ma-sm">
-            {{ range .GetTerms "brands" }}
-            <div class="ma-sm">
-                {{- partial "link-taxonomy-icon" . }}
-            </div>
-            {{ end }}
-            {{ range .GetTerms "flavors" }}
-            <div class="ma-sm">
-                {{- partial "link-taxonomy-icon" . }}
-            </div>
-            {{ end }}
-        </div>
+<div class="navigation">
+  <div class="container">
+    {{- partial "review/review.html" . -}}
+    <h3 class="tc wavy">See More</h3>
+    <div class="flex flex-center ma-sm justify-around review-links">
+      {{ with .NextInSection }}
+      <a href="{{ .RelPermalink }}">
+        <div>Previous</div>
+      </a>
+      {{ end }} {{ range .GetTerms "brands" }}
+      <div class="ma-sm icon-link">{{- partial "link-taxonomy-icon" . }}</div>
+      {{ end }} {{ range .GetTerms "flavors" }}
+      <div class="ma-sm">{{- partial "link-taxonomy-icon" . }}</div>
+      {{ end }} {{ with .PrevInSection }}
+      <a href="{{ .RelPermalink }}">
+        <div>Next</div>
+</a>
+      {{ end }}
     </div>
-    <div class="review-end-wiggle">
-        {{- partial "wiggle.html" . }}
-    </div>
+  </div>
+  <div class="review-end-wiggle">{{- partial "wiggle.html" . }}</div>
 </div>
 {{- end }}

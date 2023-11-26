@@ -1,10 +1,8 @@
 {{ $page := . }}
-<div class="grid c2 beverage">
-  <div class="g-column">{{- partial "review/beverage.html" . }}</div>
-  <div>
-    <h2>{{.Params.brands}} {{.Title}}</h2>
-    {{- partial "review/rating" .Params.rating }}
-    <div class="review">{{ .Content }}</div>
-  </div>
+<div class="grid max-width gap-sm c2 beverage justify-center align-center">
+  <h2 class="g-row tc">{{.Params.brands}}'s {{.Title}}</h2>
+  <div class="review">{{ .Content }}</div>
+  <div></div>
+  <div></div>
+  {{- partial "review/rating" .Params.rating }}
 </div>
-

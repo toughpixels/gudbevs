@@ -1,9 +1,9 @@
-<div>
-  <a href="{{ .Permalink}}" class="flavor-link tc">
-    {{ with .Params.icon }}
-      <div class="flavor-icon">{{.}}</div>
-    {{ end }}
-    {{- partial "svg" . }}
-    <div class="underline m-top-sm">{{ .Title }}</div>
-  </a>
-</div>
+<a
+  href="{{ .Permalink}}"
+  class="flavor-link tc flex direction-column justify-center"
+>
+  {{ with .Params.icon }}
+  <div class="flavor-icon large-text">{{.}}</div>
+  {{ end }} {{- partial "svg" . }}
+  <div class="underline m-top-sm text-shadow">{{ .Title }}</div>
+</a>
