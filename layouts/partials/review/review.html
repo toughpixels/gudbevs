@@ -1,8 +1,13 @@
-{{ $page := . }}
 <div class="grid max-width gap-sm c2 beverage justify-center align-center">
   <h2 class="g-row tc">{{.Params.brands}}'s {{.Title}}</h2>
-  <div class="review">{{ .Content }}</div>
-  <div></div>
-  <div></div>
-  {{- partial "review/rating" .Params.rating }}
+  {{ with .Params.rating }}
+  <div class="rating-score underline justify-center flex align-end">
+    <span class="rating-emphasis larger">{{ . }}</span>
+    <div>/10</div>
+  </div>
+  {{ end }}
+  <div>{{ .Content }}</div>
+  {{ range .Resources.ByType "image" }}
+  <div class="g-row review-image">{{ partial "image" . }}</div>
+  {{ end }}
 </div>

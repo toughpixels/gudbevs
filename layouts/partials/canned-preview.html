@@ -1,21 +1,21 @@
 <a
   href="{{ .RelPermalink }}"
-  class="review-link flex flex align-center justify-center direction-column gap-sm"
+  class="review-link underline flex flex align-center justify-center direction-column gap-sm link-text-shadow"
 >
-  <div class="review-link-text tc large-text text-shadow">{{.Title}}</div>
+  <div class="review-link tc large-text">{{.Title}}</div>
   <div
     class="flex flex-center justify-around gap-sm review-link-icon-container"
   >
     {{ range .GetTerms "brands" }}{{- partial "svg" . }} {{ end }} {{ range
     .GetTerms "flavors" }} {{ with .Params.icon }}
-    <div class="small-flavor-icon height-sm">{{.}}</div>
+    <div class="low-shadow link-emoji height-sm">{{.}}</div>
     {{ end }} {{ end }}
   </div>
   {{ with .Params.rating }}
   <svg
     class="large-height preview-score"
     viewBox="0 0 100 100"
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"        
   >
     <circle cx="50" cy="50" r="50" />
     <path id="centerPath" pathLength="2" d="M 0 50 h 100" />
